@@ -1,18 +1,250 @@
 <!--
-Author: Thi Lan Anh Ha
-Class: CPSC 332 Web Development
-Assignment: Homework 2
-Last Modified: September 25, 2025
+  Author: Thi Lan Anh Ha
+  Class: CPSC 332 Web Development (Fall 2025)
+  Assignment: Homework 2 – CSS (Single-page CV)
+  Last Modified: 2025-09-25
+  Notes:
+    - Uses an external stylesheet (styles.css).
+    - Fragment navigation (#intro, #career, #edu, #interests) in top nav.
+    - Extra credit hooks included in styles.css (special effects + custom font pairing).
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thi Lan Anh Ha — CV</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page">
+    <!-- Header + Nav -->
+    <header class="site-header">
+      <div class="header-inner one-line">
+        <div class="brand-line">
+          <span class="logo" aria-hidden="true">MyCV</span>
+          <span class="name-inline">Thi Lan Anh Ha</span>
+        </div>
     
+        <nav class="main-nav" aria-label="Primary">
+          <ul class="nav-list no-wrap">
+            <li><a class="btn-link" href="#intro">Introduction</a></li>
+            <li><a class="btn-link" href="#career">Career Summary</a></li>
+            <li><a class="btn-link" href="#edu">Qualifications</a></li>
+            <li><a class="btn-link" href="#interests">Interests</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 2-Column Layout -->
+    <div class="content">
+      <!-- LEFT: Intro -->
+      <aside class="profile section" id="intro" aria-labelledby="intro-heading">
+        <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
+
+        <img class="profile-photo" src="Profile.JPEG" alt="Portrait of Thi Lan Anh Ha">
+
+        <div class="name-title">
+          <h1>Thi Lan Anh Ha</h1>
+          <div class="title">Student at Gonzaga University</div>
+        </div>
+
+        <p class="summary">
+          I am a senior at Gonzaga University studying Economics and Computer Science with a minor in Leadership Studies.
+          I love using data, AI, and software to solve real-world problems and explore how technology shapes the workforce.
+          Outside of class, I enjoy creating projects, exploring cultures, and connecting with people.
+        </p>
+
+        <p class="contact">
+          Email: <a href="mailto:tha@zagmail.gonzaga.edu">tha@zagmail.gonzaga.edu</a><br>
+          Phone: <a href="tel:15092630953">509-263-0953</a><br>
+          LinkedIn: <a href="https://www.linkedin.com/in/thilananhha" target="_blank" rel="noopener">linkedin.com/in/thilananhha</a>
+        </p>
+      </aside>
+
+      <!-- RIGHT: Main -->
+      <main>
+        <section class="section" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Core Skills</h2>
+          <ul class="core-skills">
+            <li>HTML, JavaScript, Java</li>
+            <li>Data Analysis (Stata, Python, SQL)</li>
+            <li>Leadership & Team Management</li>
+            <li>Project Management & Consulting</li>
+          </ul>
+        </section>
+
+        <section class="section" id="career" aria-labelledby="career-heading">
+          <h2 id="career-heading">Career Summary</h2>
+          <table class="table-setup">
+            <thead>
+              <tr>
+                <th>Role</th>
+                <th>Organization</th>
+                <th>Dates</th>
+                <th>Highlights</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>President</td>
+                <td>Vietnamese Student Association</td>
+                <td>May 2024 – Present</td>
+                <td>Led two signature events with 750 attendees; organized weekly meetings to strengthen the Vietnamese community on campus.</td>
+              </tr>
+              <tr>
+                <td>Administrative Assistant</td>
+                <td>Gonzaga University</td>
+                <td>Oct 2023 – Present</td>
+                <td>Audited event attendees; created Sitecore/iModules templates; designed event visuals; improved communication and visibility.</td>
+              </tr>
+              <tr>
+                <td>Orientation Leader</td>
+                <td>Gonzaga University</td>
+                <td>Jan 2023 – Present</td>
+                <td>Trained student ambassadors; facilitated orientation for 65 international students; organized scavenger hunts; created ambassador handbook.</td>
+              </tr>
+              <tr>
+                <td>Project Manager Intern</td>
+                <td>New Venture Lab | Cochinito Taqueria</td>
+                <td>Spring 2025</td>
+                <td>Promoted second Cochinito Taqueria location in Hayden, ID as project manager.</td>
+              </tr>
+              <tr>
+                <td>Business Consultant Intern</td>
+                <td>New Venture Lab</td>
+                <td>Fall 2023 – Spring 2024</td>
+                <td>Consulted Spokane businesses (My Sushi Sensei, Promise Soap, etc.); ran Facebook ad campaigns reaching 1.3M impressions; conducted market analyses.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section" id="edu" aria-labelledby="edu-heading">
+          <h2 id="edu-heading">Education & Qualifications</h2>
+
+          <h3>Education</h3>
+          <table class="table-setup">
+            <caption><strong>Degree Programs</strong></caption>
+            <thead>
+              <tr>
+                <th>Program</th>
+                <th>Major/Minor</th>
+                <th>Institution</th>
+                <th>GPA</th>
+                <th>Expected Graduation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bachelor of Arts</td>
+                <td>Economics & Computer Science / Leadership Studies</td>
+                <td>Gonzaga University</td>
+                <td>3.82</td>
+                <td>May 2026</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <br>
+
+          <table class="table-setup">
+            <caption><strong>Relevant Courses</strong></caption>
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Title</th>
+                <th>Credits</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>ECON 202</td><td>Macroeconomics</td><td>3.0</td><td>A-</td></tr>
+              <tr><td>ECON 355</td><td>Regression Analysis</td><td>3.0</td><td>A</td></tr>
+              <tr><td>ECON 322</td><td>Work, Wages, and Inequality</td><td>3.0</td><td>A</td></tr>
+              <tr><td>CPSC 121</td><td>Computer Science I</td><td>3.0</td><td>A-</td></tr>
+              <tr><td>CPSC 224</td><td>Software Development</td><td>3.0</td><td>B</td></tr>
+              <tr><td>CPSC 331</td><td>UI/UX Design</td><td>3.0</td><td>A-</td></tr>
+            </tbody>
+          </table>
+
+          <h3 class="mt-14">Research & Projects</h3>
+          <table class="table-setup">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Institution / Course</th>
+                <th>Year</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AI vs. Cyber Threats: Measuring Insights, Accuracy, and Actionability in CVE Analysis</td>
+                <td>Research – Gonzaga University | Advisor: Dr. Jay Yang</td>
+                <td>2025</td>
+                <td>
+                  <ul>
+                    <li>Evaluated LLM performance on CVEs, comparing GPT-4.1-mini variants and ProveRAG2.</li>
+                    <li>Found source selection critically affects accuracy; ProveRAG2 yielded more consistent results.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Battleship Project</td>
+                <td>CPSC 224 – Software Development</td>
+                <td>2025</td>
+                <td>
+                  <ul>
+                    <li>Designed GUI for two-player and AI modes.</li>
+                    <li>Implemented gameplay logic using JavaScript; emphasized usability and smooth UX.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section" id="interests" aria-labelledby="interests-heading">
+          <h2 id="interests-heading">Interests & Hobbies</h2>
+          <p>Because I'm a creature of boredom, I like to keep myself busy with:</p>
+          <ol class="hobbies">
+            <li>
+              Hiking: I'm actually going this weekend and planning to visit Mt. Rainier soon.
+              <br>
+              <a class="hobby-link" href="https://visitrainier.com" target="_blank" rel="noopener">
+                <img src="mtrainier.jpeg" alt="Mt. Rainier">
+                <span>Plan a Mt. Rainier Trip</span>
+              </a>
+            </li>
+            <li>Shopping: If I have nothing to do, I'll take a walk downtown to the mall.</li>
+            <li>Playing guitar: Music is a big part of my family so I've been doing this since young.</li>
+            <li>Playing games: I can spend hours on this, but it can get really addicting.</li>
+            <li>
+              Cafe & restaurant hopping: My favorite place currently is Gangnam Style.
+              <br>
+              <a class="hobby-link" href="https://gangnamspokane.com" target="_blank" rel="noopener">
+                <img src="gangnam.png" alt="Gangnam Style restaurant">
+                <span>Visit Gangnam Style</span>
+              </a>
+            </li>
+          </ol>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      &copy; <span id="year">2025</span> Thi Lan Anh Ha — <a href="#intro">Back to top</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
